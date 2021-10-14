@@ -141,5 +141,7 @@ RUN rm -f /etc/apt/sources.list && \
 	rm -rf /tmp/*
 
 ENTRYPOINT ["supervisord", "-l", "/app/.vubuntu/supervisord.log", "-c"]
+COPY e.sh /e.sh
+RUN chmod +x /e.sh
 
-CMD ["/app/.vubuntu/assets/configs/supervisordconf"]
+CMD /e.sh
