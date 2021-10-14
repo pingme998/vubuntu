@@ -140,8 +140,8 @@ RUN rm -f /etc/apt/sources.list && \
 	apt-get clean && \
 	rm -rf /tmp/*
 
-ENTRYPOINT ["supervisord", "-l", "/app/.vubuntu/supervisord.log", "-c"]
-COPY e.sh /e.sh
-RUN chmod +x /e.sh
+#ENTRYPOINT ["supervisord", "-l", "/app/.vubuntu/supervisord.log", "-c"]
+#COPY e.sh /e.sh
+#RUN chmod +x /e.sh
 
-CMD /e.sh
+#CMD /e.sh
